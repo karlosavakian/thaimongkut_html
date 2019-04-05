@@ -1,0 +1,763 @@
+/* The version of Neat used in this Pen was 2.* */
+/* The version of Bourbon used in this Pen was 5.* */
+/* Font Family*/
+/* transition*/
+/* Media Queries*/
+/* Grid Columns*/
+/*Shadows*/
+/*highlights*/
+/*Midtones*/
+/*Other colors*/
+/*Other colors*/
+/*  ------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 1em;
+  overflow-x: hidden; }
+
+/*-----------------------------------------------------*/
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
+  height: auto;
+  font-weight: 400;
+  line-height: 1.30;
+  color: #000;
+  font-family: "Mosse Thai";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  list-style-type: none;
+  list-style: none; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+p {
+  margin-bottom: 1.3em;
+  line-height: 1.8em; }
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: .3em;
+  font-weight: inherit;
+  line-height: 1.2;
+  font-family: "Malte Thai"; }
+
+h1 {
+  font-weight: 700;
+  margin-top: 0;
+  font-size: 2.5em; }
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Mosse Thai"; }
+
+h4 {
+  font-size: 1em; }
+
+p,
+a {
+  font-size: 1em; }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5em; }
+  h2 {
+    font-size: 2em; }
+  h3 {
+    font-size: 1.2em; }
+  h4 {
+    font-size: 1em; }
+  p,
+  a {
+    font-size: 1.2em; } }
+
+small,
+.font_small {
+  font-size: 0.707em; }
+
+button {
+  background: transparent;
+  border: none; }
+
+/* mixins */
+/* HEADER */
+/*sizes*/
+/*Urls*/
+/*_________________________________________________________________________________________*/
+/*----------------------------------------------------------*/
+.main-header {
+  height: auto;
+  width: 100%;
+  z-index: 99999;
+  background: white;
+  position: relative; }
+  @media (min-width: 768px) {
+    .main-header {
+      min-height: 150px;
+      background: #c93d18; } }
+
+.top-header {
+  padding: 5% 0;
+  position: relative;
+  color: white; }
+  @media (min-width: 768px) {
+    .top-header {
+      max-width: 1200px;
+      margin: auto;
+      left: 0;
+      right: 0; } }
+  .top-header .header-logo {
+    margin: 0 0 0 5%;
+    min-width: 100px;
+    min-height: 150px;
+    background: url("https://s3.eu-west-3.amazonaws.com/mongkut/icons/brand/logo-color.svg") no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0; }
+    @media (min-width: 768px) {
+      .top-header .header-logo {
+        min-width: 250px;
+        margin: 0;
+        background: url("https://s3.eu-west-3.amazonaws.com/mongkut/icons/brand/logo-white.svg") no-repeat center center; } }
+  .top-header > nav {
+    font-family: "Mosse Thai";
+    font-weight: 900;
+    font-size: 2em;
+    padding: 2em 0; }
+    .top-header > nav .header-menu {
+      overflow: hidden;
+      text-align: center;
+      background: #e4603d;
+      display: none;
+      position: absolute;
+      top: 170px;
+      height: 1000px;
+      width: 100%;
+      overflow: hidden; }
+      .top-header > nav .header-menu.hide-mega-menu {
+        display: block; }
+      @media (min-width: 768px) {
+        .top-header > nav .header-menu {
+          background: none;
+          position: relative;
+          top: 0;
+          display: block;
+          text-align: right;
+          height: auto;
+          width: auto;
+          float: right; } }
+      .top-header > nav .header-menu li {
+        margin: 2em 1em;
+        display: block;
+        position: relative;
+        z-index: 1;
+        padding: 2px 6px; }
+        @media (min-width: 768px) {
+          .top-header > nav .header-menu li {
+            margin: 0 1em;
+            display: inline; } }
+        .top-header > nav .header-menu li a {
+          color: white;
+          text-decoration: none; }
+          @media (min-width: 768px) {
+            .top-header > nav .header-menu li a:after {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              display: block;
+              background-color: white;
+              content: "";
+              transform: translate3d(0, 100%, 0);
+              z-index: -1; }
+            .top-header > nav .header-menu li a:hover {
+              color: #c93d18; }
+              .top-header > nav .header-menu li a:hover:after {
+                transform: translate3d(0, 0, 0);
+                transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1); } }
+
+.navicon {
+  margin: 0 5% 0 0;
+  float: right;
+  cursor: pointer;
+  display: block;
+  position: relative; }
+  @media (min-width: 768px) {
+    .navicon {
+      display: none; } }
+  .navicon .burger {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #c93d18;
+    transition: all .5 ease-in-out; }
+    .navicon .burger:before, .navicon .burger:after {
+      position: absolute;
+      background: #c93d18;
+      content: '';
+      width: 40px;
+      height: 5px;
+      transition: all .5 ease-in-out; }
+    .navicon .burger:before {
+      top: -8px; }
+    .navicon .burger:after {
+      top: 8px; }
+
+.navicon-active .burger {
+  background: transparent; }
+  .navicon-active .burger:before {
+    transform: rotate(45deg) translate(5px, 6px); }
+  .navicon-active .burger:after {
+    transform: rotate(-45deg) translate(5px, -6px); }
+
+/*LANDING*/
+/*URL:_____________________________________________________________________________ */
+/*_________________________________________________________________________________________*/
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: white;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999999;
+  overflow: hidden; }
+  .overlay article {
+    text-align: center;
+    color: #c93d18;
+    padding: 2em 3em;
+    font-size: 2em;
+    font-weight: 600; }
+    .overlay article a {
+      color: #c93d18; }
+    @media (min-width: 768px) {
+      .overlay article {
+        font-size: 3em; } }
+    .overlay article h3 {
+      font-weight: 900;
+      font-family: "Malte Thai"; }
+  .overlay.open-modal {
+    display: block;
+    opacity: 1;
+    visibility: visible; }
+  .overlay .close-modal {
+    margin: 5% 5% 0 0;
+    float: right;
+    color: #c93d18;
+    cursor: pointer;
+    font-size: 2em; }
+    @media (min-width: 768px) {
+      .overlay .close-modal {
+        margin: 50px 50px 0 0;
+        font-size: 5em; } }
+    .overlay .close-modal:hover {
+      color: #a42807; }
+
+.landing > div {
+  background: white;
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .landing > div section {
+    min-height: 200px;
+    overflow: hidden;
+    padding: 3em 2em;
+    position: relative;
+    z-index: 9998; }
+    @media (min-width: 768px) {
+      .landing > div section {
+        max-width: 1200px;
+        margin: auto;
+        left: 0;
+        right: 0; } }
+
+.landing .portada {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: #c93d18;
+  background-size: cover; }
+  .landing .portada .meal-icon-tom-yuk {
+    position: absolute;
+    left: -15%;
+    background: white;
+    display: none;
+    -webkit-mask: url("icons/misc/tom-yum.svg") 0 0 no-repeat; }
+    @media (min-width: 768px) {
+      .landing .portada .meal-icon-tom-yuk {
+        height: 170%;
+        width: 200%;
+        display: block; } }
+  .landing .portada .portada-pitch {
+    padding: 0 0 10%;
+    float: right;
+    color: white; }
+    .landing .portada .portada-pitch > a {
+      font-family: "Malte Thai";
+      font-weight: 700;
+      font-size: 2em; }
+    .landing .portada .portada-pitch .social-links {
+      float: right; }
+      .landing .portada .portada-pitch .social-links > li {
+        margin: 0 1em; }
+        .landing .portada .portada-pitch .social-links > li a {
+          margin: 0 0.5em;
+          text-decoration: none;
+          color: white;
+          font-size: 2em; }
+        .landing .portada .portada-pitch .social-links > li:hover {
+          color: white;
+          transition: all 0.25s ease; }
+    @media (min-width: 768px) {
+      .landing .portada .portada-pitch {
+        width: 50%; }
+        .landing .portada .portada-pitch p {
+          font-size: 1.7em; } }
+
+.landing .hero {
+  color: white;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: linear-gradient(-150deg, transparent 20%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0.8) 100%), url("https://s3.eu-west-3.amazonaws.com/mongkut/photos/local/local-thai-mongkut-restaurante-9.jpg") no-repeat center center;
+  background-size: cover; }
+  .landing .hero .hero-pitch {
+    padding: 5% 0; }
+    @media (min-width: 768px) {
+      .landing .hero .hero-pitch {
+        width: 60%; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    .landing .hero .hero-pitch p,
+    .landing .hero .hero-pitch a {
+      font-size: 1.7em; } }
+
+.landing .peek {
+  background: white; }
+  .landing .peek ul > li {
+    margin-top: 1px;
+    min-height: 100px;
+    text-align: center;
+    width: calc(100% - 2px);
+    float: left;
+    margin-left: 1px; }
+    @media (min-width: 768px) {
+      .landing .peek ul > li {
+        width: calc(33.3333333333% - 1.3333333333px);
+        float: left;
+        margin-left: 1px; } }
+    .landing .peek ul > li p {
+      padding: 0 1em; }
+    .landing .peek ul > li h3 {
+      padding: 0.5em 0 0; }
+    .landing .peek ul > li hr {
+      width: 50px;
+      height: 1px;
+      border: none;
+      background: #c93d18; }
+    .landing .peek ul > li .peek-icons {
+      width: 250px; }
+
+.landing .about {
+  min-height: 500px; }
+  .landing .about section article {
+    color: black;
+    text-align: center; }
+    .landing .about section article * {
+      padding: 0.5em; }
+    .landing .about section article h1 {
+      margin-bottom: 0;
+      color: #c93d18; }
+    .landing .about section article h3 {
+      margin-bottom: 1em;
+      color: black; }
+    .landing .about section article a {
+      font-size: 2em;
+      text-transform: uppercase;
+      font-family: "Malte Thai";
+      font-weight: 800; }
+  .landing .about section .restaurant-videos > div {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }
+    @media (min-width: 768px) {
+      .landing .about section .restaurant-videos > div {
+        margin: 10px;
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 20px; } }
+    .landing .about section .restaurant-videos > div div {
+      position: absolute;
+      margin-top: 100px;
+      text-align: center;
+      margin-left: 140px;
+      color: #fff;
+      width: 300px;
+      font-family: "Malte Thai";
+      font-weight: 800;
+      font-size: 40px; }
+    .landing .about section .restaurant-videos > div .placeholder-video {
+      width: 100%;
+      height: 300px; }
+      .landing .about section .restaurant-videos > div .placeholder-video:after {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0; }
+
+.landing .restaurant {
+  background: url("https://s3.eu-west-3.amazonaws.com/mongkut/photos/misc/misc-thai-mongkut-restaurante-9.jpg") 0 0 no-repeat;
+  background-size: cover; }
+  .landing .restaurant:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: .6; }
+  .landing .restaurant section article {
+    padding: 10% 3em;
+    color: white;
+    text-align: center; }
+    .landing .restaurant section article h1 {
+      margin-bottom: 0; }
+    .landing .restaurant section article h3 {
+      margin-bottom: 1em;
+      color: white; }
+
+/*FOOTER*/
+/*------------------------------------------------------*/
+footer {
+  background: black; }
+  footer .main-footer {
+    height: auto;
+    width: 100%;
+    background: black;
+    position: relative; }
+    footer .main-footer .footer-links,
+    footer .main-footer .footer-disclaimer {
+      padding: 2em;
+      overflow: hidden; }
+      @media (min-width: 768px) {
+        footer .main-footer .footer-links,
+        footer .main-footer .footer-disclaimer {
+          max-width: 1200px;
+          margin: auto;
+          left: 0;
+          right: 0; } }
+    footer .main-footer .footer-links > ul {
+      color: white;
+      width: calc(100% - 2px);
+      float: left;
+      margin-left: 1px; }
+      footer .main-footer .footer-links > ul p a {
+        color: white; }
+        footer .main-footer .footer-links > ul p a:hover {
+          color: #e4603d; }
+      footer .main-footer .footer-links > ul:first-child .footer-logo {
+        height: 100px;
+        width: 150px;
+        padding: 1em;
+        background: url("icons/brand/logo-color.svg") no-repeat;
+        background-size: 100%; }
+      footer .main-footer .footer-links > ul .social-footer > a {
+        color: #c93d18;
+        font-size: 2em;
+        padding-left: 0em;
+        padding-right: 1em; }
+        @media (min-width: 768px) {
+          footer .main-footer .footer-links > ul .social-footer > a {
+            padding-left: 1em;
+            padding-right: 0em; } }
+        footer .main-footer .footer-links > ul .social-footer > a:hover {
+          color: white;
+          transition: all 0.25s ease; }
+      @media (min-width: 768px) {
+        footer .main-footer .footer-links > ul {
+          width: calc(25% - 1.25px);
+          float: left;
+          margin-left: 1px; }
+          footer .main-footer .footer-links > ul:last-child {
+            text-align: right; }
+            footer .main-footer .footer-links > ul:last-child li {
+              display: inline-block; } }
+      footer .main-footer .footer-links > ul h3 {
+        font-size: 2em;
+        color: #c93d18;
+        font-weight: 900;
+        font-family: "Malte Thai";
+        text-transform: none; }
+      footer .main-footer .footer-links > ul li {
+        margin: 1em 0;
+        cursor: pointer; }
+  footer hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #4b4b4b;
+    opacity: 0.4; }
+  footer .disclaimer-footer {
+    user-select: none;
+    color: #4b4b4b;
+    padding: 0 2em; }
+    footer .disclaimer-footer section {
+      padding: 1em 0;
+      overflow: hidden;
+      font-size: .8em; }
+      @media (min-width: 768px) {
+        footer .disclaimer-footer section {
+          max-width: 1200px;
+          margin: auto;
+          left: 0;
+          right: 0; } }
+      footer .disclaimer-footer section ul,
+      footer .disclaimer-footer section li {
+        display: inline-block; }
+      footer .disclaimer-footer section ul:first-child {
+        padding-bottom: 1em; }
+        @media (min-width: 768px) {
+          footer .disclaimer-footer section ul:first-child {
+            float: right; }
+            footer .disclaimer-footer section ul:first-child * {
+              padding-left: 1em;
+              padding-bottom: 0; } }
+        footer .disclaimer-footer section ul:first-child li a:hover {
+          color: #c93d18;
+          transition: all 0.25s ease; }
+
+/*MENU*/
+.menu {
+  background: white;
+  background: white; }
+  .menu section {
+    min-height: 200px;
+    overflow: hidden;
+    padding: 3em 2em;
+    position: relative;
+    z-index: 9998; }
+    @media (min-width: 768px) {
+      .menu section {
+        max-width: 1200px;
+        margin: auto;
+        left: 0;
+        right: 0; } }
+  .menu section nav ul h3 {
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 2em;
+    margin: 0.5em 0; }
+    @media (min-width: 768px) {
+      .menu section nav ul h3 {
+        font-size: 3em;
+        text-align: center; } }
+    .menu section nav ul h3 > span {
+      font-weight: 500;
+      text-transform: none; }
+  .menu section nav ul li {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+    margin: 0.5em 0; }
+    @media (min-width: 768px) {
+      .menu section nav ul li {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 20px;
+        min-height: 150px; } }
+    .menu section nav ul li > span {
+      margin: 10px 0;
+      max-width: 80%; }
+    .menu section nav ul li .meal-name {
+      font-weight: 800;
+      font-family: "Malte Thai";
+      font-size: 1.5em;
+      color: #c93d18; }
+      .menu section nav ul li .meal-name .meal-price {
+        padding: 5px 0 0;
+        font-size: .8em;
+        position: relative;
+        float: right;
+        font-family: "Mosse Thai"; }
+    .menu section nav ul li .meal-esp {
+      display: block; }
+    .menu section nav ul li .meal-eng {
+      margin: -0.5em 0 0;
+      font-weight: 300;
+      display: block;
+      font-style: italic; }
+
+/*CONTACTO*/
+.mapouter {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  .mapouter #gmap_canvas {
+    height: 100%;
+    width: 100%; }

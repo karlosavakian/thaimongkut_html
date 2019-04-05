@@ -1,0 +1,968 @@
+/* The version of Neat used in this Pen was 2.* */
+@import "neat";
+/* The version of Bourbon used in this Pen was 5.* */
+@import "bourbon";
+
+/* Font Family*/
+
+$font-one: 'Mosse Thai';
+$font-two: 'Malte Thai';
+/* transition*/
+
+$main-transition:.5s;
+/* Media Queries*/
+
+$lg: ( media: "(min-width: 768px)", );
+/* Grid Columns*/
+
+$col-gutter-default:1px;
+$one-col: ( columns: 1, gutter: $col-gutter-default, );
+$two-col: ( columns: 2, gutter: $col-gutter-default, );
+$three-col: ( columns: 3, gutter: $col-gutter-default, );
+$four-col: ( columns: 4, gutter: $col-gutter-default, );
+$five-col: ( columns: 5, gutter: $col-gutter-default, );
+$six-col: ( columns: 6, gutter: $col-gutter-default, );
+/*Shadows*/
+
+$color-one:rgba(0, 0, 0, 1);
+$color-one-dark:rgba(0, 0, 0, 1);
+$color-one-clear:rgba(75, 75, 75, 1);
+/*highlights*/
+
+$color-two:rgba(255, 255, 255, 1);
+$color-two-dark:rgba(130, 130, 130, 1);
+$color-two-clear:rgba(218, 217, 217, 1);
+/*Midtones*/
+
+$color-three-dark:rgba(164, 40, 7, 1.0);
+$color-three:rgba(201, 61, 24, 1.0);
+$color-three-clear:rgba(228, 96, 61, 1.0);
+/*Other colors*/
+
+$color-four:rgba(208, 183, 168, 1.0);
+$color-four-dark:rgba(166, 146, 134, 1.0);
+$color-four-clear:rgba(226, 211, 202, 1.0);
+/*Other colors*/
+
+$color-five:rgba(85, 239, 196, 1.0);
+$color-six:rgba(253, 121, 168, 1.0);
+$color-seven:rgba(162, 155, 254, 1.0);
+/*  ------------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    font-size: 1em;
+    overflow-x: hidden;
+}
+
+/*-----------------------------------------------------*/
+
+html,
+body {
+    overflow-x: hidden;
+    padding: 0;
+    height: auto;
+    font-weight: 400;
+    line-height: 1.30;
+    color: #000;
+    font-family: $font-one;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    list-style-type: none;
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 1.3em;
+    line-height: 1.8em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: .3em;
+    font-weight: inherit;
+    line-height: 1.2;
+    font-family: $font-two;
+}
+
+h1 {
+    font-weight: 700;
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: $font-one;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p,
+a {
+    font-size: 1em;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    p,
+    a {
+        font-size: 1.2em;
+    }
+}
+
+small,
+.font_small {
+    font-size: 0.707em;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+/* mixins */
+
+@mixin center {
+    @include margin(auto auto);
+    left: 0;
+    right: 0;
+}
+
+@mixin vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin wrap {
+    //background: $color-five;
+    //@include grid-visual();
+    @include grid-media ($lg) {
+        max-width: 1200px;
+        @include center;
+    }
+}
+
+@mixin invisible {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@mixin visible {
+    visibility: visible;
+    opacity: 1;
+}
+/* HEADER */
+
+ /*sizes*/
+
+ $header-top-hg:150px;
+ /*Urls*/
+
+ $logo-color: url('https://s3.eu-west-3.amazonaws.com/mongkut/icons/brand/logo-color.svg');
+ $logo-white: url('https://s3.eu-west-3.amazonaws.com/mongkut/icons/brand/logo-white.svg');
+ /*_________________________________________________________________________________________*/
+
+ /*----------------------------------------------------------*/
+
+ .main-header {
+  @include size (100%,
+  auto);
+  z-index: 99999;
+  background: $color-two;
+  position: relative;
+  @include grid-media($lg) {
+   min-height: $header-top-hg;
+   background: $color-three;
+  }
+ }
+
+ .top-header {
+  @include padding(5% 0 5% 0);
+  @include wrap;
+  position: relative;
+  color: $color-two;
+  .header-logo {
+   @include margin(0 0 0 5%);
+   min-width: 100px;
+   min-height: $header-top-hg;
+    background: $logo-color no-repeat center center;
+   background-size: 100%;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   @include grid-media($lg) {
+    min-width: 250px;
+    @include margin(0 0 0 0);
+    background: $logo-white no-repeat center center;
+   }
+  }
+  >nav {
+   font-family: $font-one;
+   font-weight: 900;
+   font-size: 2em;
+   @include padding(2em 0 2em 0);
+   .header-menu {
+    overflow: hidden;
+    text-align: center;
+    background: $color-three-clear;
+    display: none;
+    position: absolute;
+    top: $header-top-hg+20px;
+    @include size(100%,
+    1000px);
+    overflow: hidden;
+    &.hide-mega-menu {
+     display: block;
+    }
+    @include grid-media($lg) {
+     background: none;
+     position: relative;
+     top: 0;
+     display: block;
+     text-align: right;
+     @include size(auto,
+     auto);
+     float: right;
+    }
+    li {
+     @include margin(2em 1em 2em 1em);
+     display: block;
+     position: relative;
+     z-index: 1;
+     padding: 2px 6px;
+     @include grid-media($lg) {
+      @include margin(0 1em 0 1em);
+      display: inline;
+     }
+     a {
+      color: $color-two;
+      text-decoration: none;
+      @include grid-media($lg) {
+       &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        background-color: $color-two;
+        content: "";
+        transform: translate3d(0, 100%, 0);
+        z-index: -1;
+       }
+       &:hover {
+        color: $color-three;
+        &:after {
+         transform: translate3d(0, 0, 0);
+         transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1);
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+
+ .navicon {
+  @include margin(0 5% 0 0);
+  float: right;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  @include grid-media($lg) {
+   display: none;
+  }
+  .burger {
+   position: relative;
+   display: block;
+   width: 40px;
+   height: 5px;
+   background: $color-three;
+   transition: all .5 ease-in-out;
+   &:before,
+   &:after {
+    position: absolute;
+    background: $color-three;
+    content: '';
+    width: 40px;
+    height: 5px;
+    transition: all .5 ease-in-out;
+   }
+   &:before {
+    top: -8px;
+   }
+   &:after {
+    top: 8px;
+   }
+  }
+ }
+
+ .navicon-active {
+  .burger {
+   background: transparent;
+   &:before {
+    transform: rotate(45deg) translate(5px, 6px);
+   }
+   &:after {
+    transform: rotate(-45deg) translate(5px, -6px);
+   }
+  }
+ }
+
+
+/*LANDING*/
+ /*URL:_____________________________________________________________________________ */
+
+ $hero-bg: url('https://s3.eu-west-3.amazonaws.com/mongkut/photos/local/local-thai-mongkut-restaurante-9.jpg');
+ $hero2-bg: url('https://s3.eu-west-3.amazonaws.com/mongkut/photos/misc/misc-thai-mongkut-restaurante-9.jpg');
+ /*_________________________________________________________________________________________*/
+
+ .overlay {
+  position: fixed;
+  @include size(100%,
+  100%);
+  background: $color-two;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999999;
+  overflow: hidden;
+  article {
+   text-align: center;
+   color: $color-three;
+   @include padding(2em 3em 2em 3em);
+   font-size: 2em;
+   font-weight: 600;
+   a {
+    color: $color-three;
+   }
+   @include grid-media($lg) {
+    font-size: 3em;
+   }
+   h3 {
+    font-weight: 900;
+    font-family: $font-two;
+   }
+  }
+  &.open-modal {
+   display: block;
+   opacity: 1;
+   visibility: visible;
+  }
+  .close-modal {
+   @include margin(5% 5% 0px 0px);
+   float: right;
+   color: $color-three;
+   cursor: pointer;
+   font-size: 2em;
+   @include grid-media($lg) {
+    @include margin(50px 50px 0px 0px);
+    font-size: 5em;
+   }
+   &:hover {
+    color: $color-three-dark;
+   }
+  }
+ }
+
+ .landing {
+  >div {
+   background: $color-two;
+   @include size(100%,
+   auto);
+   position: relative;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   section {
+    min-height: 200px;
+    @include wrap;
+    overflow: hidden;
+    @include padding(3em 2em 3em 2em);
+    position: relative;
+    z-index: 9998;
+   }
+  }
+  .portada {
+   @include size(100%,
+   100%);
+   position: relative;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   background: $color-three;
+   background-size: cover;
+   .meal-icon-tom-yuk {
+    position: absolute;
+    left: -15%;
+    background: $color-two;
+    display: none;
+    -webkit-mask: url('icons/misc/tom-yum.svg') 0 0 no-repeat;
+    @include grid-media($lg) {
+     @include size(200%,
+     170%);
+     display: block;
+    }
+   }
+   .portada-pitch {
+    @include padding(0 0 10% 0);
+    float: right;
+    color: $color-two;
+    >a {
+     font-family: $font-two;
+     font-weight: 700;
+     font-size: 2em;
+    }
+    .social-links {
+     float: right;
+     >li {
+      @include margin(0 1em 0 1em);
+      a {
+       @include margin(0 .5em 0 .5em);
+       text-decoration: none;
+       color: $color-two;
+       font-size: 2em;
+      }
+      &:hover {
+       color: $color-two;
+       transition: all $main-transition/2 ease;
+      }
+     }
+    }
+    @include grid-media($lg) {
+     width: 50%;
+     p {
+      font-size: 1.7em;
+     }
+    }
+   }
+  }
+  .hero {
+   color: $color-two;
+   position: relative;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   background: linear-gradient(-150deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, .7) 55%, rgba(0, 0, 0, .8) 100%), $hero-bg no-repeat center center;
+   background-size: cover;
+   .hero-pitch {
+    @include padding(5% 0 5% 0);
+    @include grid-media($lg) {
+     width: 60%;
+     p,
+     a {
+      @include grid-media($lg) {
+       font-size: 1.7em;
+      }
+     }
+    }
+   }
+  }
+  .peek {
+   background: $color-two;
+   ul {
+    >li {
+     margin-top: 1px;
+     min-height: 100px;
+     text-align: center;
+     @include grid-column(1,
+     $one-col);
+     @include grid-media($lg) {
+      @include grid-column(1,
+      $three-col);
+     }
+     p {
+      @include padding(0 1em 0 1em);
+     }
+     h3 {
+      @include padding(.5em 0 0em 0);
+     }
+     hr {
+      width: 50px;
+      height: 1px;
+      border: none;
+      background: $color-three;
+     }
+     .peek-icons {
+      width: 250px;
+     }
+    }
+   }
+  }
+  .about {
+   min-height: 500px;
+   section {
+    article {
+     color: $color-one;
+     text-align: center;
+     * {
+      @include padding(.5em .5em .5em .5em);
+     }
+     h1 {
+      margin-bottom: 0;
+      color: $color-three;
+     }
+     h3 {
+      margin-bottom: 1em;
+      color: $color-one;
+     }
+     a {
+      font-size: 2em;
+      text-transform: uppercase;
+      font-family: $font-two;
+      font-weight: 800;
+     }
+    }
+    .restaurant-videos {
+     >div {
+      @include grid-column(12);
+      @include grid-media($lg) {
+       @include margin(10px 10px 10px 10px);
+       @include grid-column(6);
+      }
+      div {
+       position: absolute;
+       margin-top: 100px;
+       text-align: center;
+       margin-left: 140px;
+       color: #fff;
+       width: 300px;
+       font-family: $font-two;
+       font-weight: 800;
+       font-size: 40px;
+      }
+      .placeholder-video {
+       width: 100%;
+       height: 300px;
+       &:after {
+        position: absolute;
+        @include size(100%,
+        100%);
+        background: #000;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+       }
+      }
+     }
+    }
+   }
+  }
+  .restaurant {
+   background: $hero2-bg 0 0 no-repeat;
+   background-size: cover;
+   &:before {
+    content: "";
+    position: absolute;
+    @include size(100%,
+    100%);
+    background: $color-one;
+    opacity: .6;
+   }
+   section {
+    article {
+     @include padding(10% 3em 10% 3em);
+     color: $color-two;
+     text-align: center;
+     h1 {
+      margin-bottom: 0;
+     }
+     h3 {
+      margin-bottom: 1em;
+      color: $color-two;
+     }
+    }
+   }
+  }
+ }
+
+
+/*FOOTER*/
+
+$footer-logo: url('icons/brand/logo-color.svg');
+/*------------------------------------------------------*/
+
+footer {
+ background: $color-one;
+ .main-footer {
+  @include size(100%,
+  auto);
+  background: $color-one;
+  position: relative;
+  .footer-links,
+  .footer-disclaimer {
+   @include wrap;
+   @include padding(2em 2em 2em 2em);
+   overflow: hidden;
+  }
+  .footer-links {
+   >ul {
+    color: $color-two;
+    @include grid-column(1,
+    $one-col);
+    p {
+     a {
+      color: $color-two;
+      &:hover {
+       color: $color-three-clear;
+      }
+     }
+    }
+    &:first-child {
+     .footer-logo {
+      @include size(150px,
+      100px);
+      @include padding(1em 1em 1em 1em);
+      background: $footer-logo no-repeat;
+      background-size: 100%;
+     }
+    }
+    .social-footer {
+     >a {
+      color: $color-three;
+      font-size: 2em;
+      padding-left: 0em;
+      padding-right: 1em;
+      @include grid-media($lg) {
+       padding-left: 1em;
+       padding-right: 0em;
+      }
+      &:hover {
+       color: $color-two;
+       transition: all $main-transition/2 ease;
+      }
+     }
+    }
+    @include grid-media($lg) {
+     @include grid-column(1,
+     $four-col);
+     &:last-child {
+      text-align: right;
+      li {
+       display: inline-block;
+      }
+     }
+    }
+    h3 {
+     font-size: 2em;
+     color: $color-three;
+     font-weight: 900;
+     font-family: $font-two;
+     text-transform: none;
+    }
+    li {
+     @include margin(1em 0 1em 0em);
+     cursor: pointer;
+    }
+   }
+  }
+ }
+ hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: $color-one-clear;
+  opacity: 0.4;
+ }
+ .disclaimer-footer {
+  user-select: none;
+  color: $color-one-clear;
+  @include padding (0 2em 0 2em);
+  section {
+   @include wrap;
+   @include padding(1em 0 1em 0);
+   overflow: hidden;
+   font-size: .8em;
+   ul,
+   li {
+    display: inline-block;
+   }
+   ul {
+    &:first-child {
+     padding-bottom: 1em;
+     @include grid-media($lg) {
+      float: right;
+      * {
+       padding-left: 1em;
+       padding-bottom: 0;
+      }
+     }
+     li {
+      a {
+       &:hover {
+        color: $color-three;
+        transition: all $main-transition/2 ease;
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+
+
+
+/*MENU*/
+
+
+   .menu {
+    background: $color-two;
+    section {
+     min-height: 200px;
+     @include wrap;
+     overflow: hidden;
+     @include padding(3em 2em 3em 2em);
+     position: relative;
+     z-index: 9998;
+    }
+    background: $color-two;
+    section {
+     nav {
+      ul {
+       h3 {
+        font-size: 2em;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 2em;
+        @include grid-media($lg) {
+         font-size: 3em;
+         text-align: center;
+        }
+        @include margin(.5em 0 .5em 0);
+        >span {
+         font-weight: 500;
+         text-transform: none;
+        }
+       }
+       li {
+        @include grid-column(12);
+        @include grid-media($lg) {
+         @include grid-column(6);
+         min-height: 150px;
+        }
+        @include margin(.5em 0 .5em 0);
+        >span {
+         @include margin(10px 0 10px 0);
+         max-width: 80%;
+        }
+        .meal-name {
+         font-weight: 800;
+         font-family: $font-two;
+         font-size: 1.5em;
+         color: $color-three;
+         .meal-price {
+          @include padding(5px 0 0 0);
+          font-size: .8em;
+          position: relative;
+          float: right;
+          font-family: $font-one;
+         }
+        }
+        .meal-esp {
+         display: block;
+        }
+        .meal-eng {
+         @include margin(-.5em 0 0 0);
+         font-weight: 300;
+         display: block;
+         font-style: italic;
+        }
+       }
+      }
+     }
+    }
+   }
+
+
+/*CONTACTO*/
+
+.mapouter {
+    @include size(100%, 100%);
+    position: absolute;
+    #gmap_canvas {
+        @include size(100%, 100%);
+    }
+}
